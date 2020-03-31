@@ -1,0 +1,22 @@
+~/PycharmProjects/unit_testing$ python -m pytest issue4/test_one_hot_encoder.py 
+==================================================================================== test session starts ====================================================================================
+platform linux -- Python 3.7.3, pytest-5.4.1, py-1.8.1, pluggy-0.13.1
+rootdir: /home/fedor/PycharmProjects/unit_testing
+collected 6 items                                                                                                                                                                           
+
+issue4/test_one_hot_encoder.py ....F.                                                                                                                                                 [100%]
+
+========================================================================================= FAILURES ==========================================================================================
+___________________________________________________________________________________ test_not_string_input ___________________________________________________________________________________
+
+    def test_not_string_input():
+        with pytest.raises(TypeError):
+            one_hot_encoder.fit_transform(1, 2.0)
+        with pytest.raises(TypeError):
+>           one_hot_encoder.fit_transform([1, 2.0])
+E           Failed: DID NOT RAISE <class 'TypeError'>
+
+issue4/test_one_hot_encoder.py:42: Failed
+================================================================================== short test summary info ==================================================================================
+FAILED issue4/test_one_hot_encoder.py::test_not_string_input - Failed: DID NOT RAISE <class 'TypeError'>
+================================================================================ 1 failed, 5 passed in 0.38s ================================================================================ ================================================================================

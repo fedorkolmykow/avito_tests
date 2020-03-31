@@ -1,0 +1,21 @@
+~/PycharmProjects/unit_testing$ python -m unittest -v issue3/unittest_one_hot_encoder.py 
+test_args (issue3.unittest_one_hot_encoder.TestEncoder) ... ok
+test_empty_arg (issue3.unittest_one_hot_encoder.TestEncoder) ... ok
+test_empty_arglist (issue3.unittest_one_hot_encoder.TestEncoder) ... ok
+test_not_string_input (issue3.unittest_one_hot_encoder.TestEncoder) ... FAIL
+test_return_type (issue3.unittest_one_hot_encoder.TestEncoder) ... ok
+test_similar_args (issue3.unittest_one_hot_encoder.TestEncoder) ... ok
+
+======================================================================
+FAIL: test_not_string_input (issue3.unittest_one_hot_encoder.TestEncoder)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fedor/PycharmProjects/unit_testing/issue3/unittest_one_hot_encoder.py", line 40, in test_not_string_input
+    one_hot_encoder.fit_transform([1, 2.0])
+AssertionError: TypeError not raised
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+FAILED (failures=1)
+(venv) fedor@debian:~/PycharmProjects/unit_testing$ 

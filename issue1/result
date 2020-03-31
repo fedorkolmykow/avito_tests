@@ -1,0 +1,53 @@
+~/PycharmProjects/unit_testing/issue1$ python -m doctest -v -o ELLIPSIS issue1/dockstring_morse_encode.py
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('ПОМОГИТЕ')
+Expecting:
+    Traceback (most recent call last):
+    ...
+    KeyError: 'П'
+ok
+Trying:
+    encode('Я НЕ ГОВОРЮ ПО-АНГЛИЙСКИ') # doctest: +IGNORE_EXCEPTION_DETAIL
+Expecting:
+    Traceback (most recent call last):
+    ...
+    KeyError: 'Absolutely anything'
+ok
+Trying:
+    encode('TEST FOR SMILE )')
+Expecting:
+    '... -.--.-'
+ok
+Trying:
+    encode('HI, DEVELOPER')
+Expecting:
+    '.... .. --..--   -.. . ...- . .-.. --- .--. . .-.'
+**********************************************************************
+File "/home/fedor/PycharmProjects/unit_testing/issue1/dockstring_morse_encode.py", line 38, in dockstring_morse_encode.encode
+Failed example:
+    encode('HI, DEVELOPER')
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.7/doctest.py", line 1329, in __run
+        compileflags, 1), test.globs)
+      File "<doctest dockstring_morse_encode.encode[4]>", line 1, in <module>
+        encode('HI, DEVELOPER')
+      File "/home/fedor/PycharmProjects/unit_testing/issue1/dockstring_morse_encode.py", line 43, in encode
+        LETTER_TO_MORSE[letter] for letter in message
+      File "/home/fedor/PycharmProjects/unit_testing/issue1/dockstring_morse_encode.py", line 43, in <listcomp>
+        LETTER_TO_MORSE[letter] for letter in message
+    KeyError: ','
+1 items had no tests:
+    dockstring_morse_encode
+**********************************************************************
+1 items had failures:
+   1 of   5 in dockstring_morse_encode.encode
+5 tests in 2 items.
+4 passed and 1 failed.
+***Test Failed*** 1 failures.
+
