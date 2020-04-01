@@ -8,6 +8,7 @@ certifi==2018.8.24
 cffi==1.14.0
 chardet==3.0.4
 Click==7.0
+coverage==5.0.4
 cryptography==2.6.1
 decorator==4.4.1
 defusedxml==0.6.0
@@ -68,6 +69,7 @@ pyparsing==2.4.6
 pyrsistent==0.15.5
 PySimpleSOAP==1.16.2
 pytest==5.4.1
+pytest-cov==2.8.1
 python-dateutil==2.8.1
 python-debian==0.1.35
 python-debianbts==2.8.2
