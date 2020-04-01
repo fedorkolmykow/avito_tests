@@ -1,7 +1,7 @@
 Шаги для запуска из консоли:
 1. Зайти в виртуальное окружение:
 ```
-source ../venv/bin/activate
+source venv/bin/activate
 ```
 2. Запустить скрипт с флагом ELLIPSIS:
 ```
